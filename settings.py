@@ -9,7 +9,7 @@ class UnitSelect(Enum):
     b: str = 'imperial'
     
 class WWSettings(BaseModel):
-    OpenWeather_api: str
+    OpenWeather_api: str = ""
     Temperature_unit: UnitSelect = UnitSelect.b
     city: str = "new york"
     
