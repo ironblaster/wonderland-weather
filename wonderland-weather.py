@@ -33,7 +33,7 @@ def agent_fast_reply(fast_reply, cat):
 
     settings = cat.mad_hatter.plugins["wonderland_weather"].load_settings()
     
-    if  len(settings["OpenWeather_api"])==0:
+    if "OpenWeather_api" not in settings:
         fast_reply["output"]="you need to set the openWeather api key in the plugin settings to continue asking me questions"
         return fast_reply
     
